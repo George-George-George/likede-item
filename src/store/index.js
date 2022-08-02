@@ -13,7 +13,8 @@ const store = new Vuex.Store({
     settings,
     user
   },
-  getters
+  getters,
+ 
 })
 
 export default store
