@@ -7,7 +7,7 @@
       </el-header>
       <el-container>
         <!-- 侧边栏 -->
-        <el-aside width="20%">
+        <el-aside width="10%">
           <asidebar></asidebar>
         </el-aside>
         <!-- 主要内容区域 -->

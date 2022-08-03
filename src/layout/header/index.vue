@@ -2,22 +2,25 @@
   <div class="body">
     <img src="http://likede2-admin.itheima.net/img/logo.3673fab5.png" alt="" />
     <div class="right-menu">
-      <div class="touxiang">11</div>
+      <div class="touxiang">
+        <img style="headerImg" :src="headerImg" alt="" />
+      </div>
       <div>
         <span>欢迎您,{{ $store.state.user.userInfo.userName }}</span>
       </div>
-      <div class="btn"><el-button type="danger" disabled>退出</el-button></div>
+      <div class="btn"><span>退出</span></div>
     </div>
   </div>
 </template>
 
 <script>
+import headerImg from "@/assets/404_images/404_cloud.png";
 export default {
   data() {
-    return {};
+    return {
+      headerImg,
+    };
   },
-
-  created() {},
 
   methods: {},
 };
@@ -30,17 +33,17 @@ export default {
   width: 100%;
   height: 100%;
   img {
-    width: 88px;
+    width: 30px;
     margin-top: 6px;
     margin-left: 15px;
     position: relative;
-    top: 4px;
+    top: -9px;
   }
 }
 .right-menu {
   position: absolute;
   right: 3%;
-  top: 4%;
+  top: 3%;
   display: flex;
   width: 240px;
   height: 60px;
@@ -48,10 +51,6 @@ export default {
   align-self: center;
   span {
     color: #fff;
-  }
-  .btn {
-    position: relative;
-    top: -16%;
   }
 }
 </style>

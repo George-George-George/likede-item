@@ -2,7 +2,6 @@
   <div class="body">
     <el-row class="tac">
       <el-col :span="12">
-        <h5>默认颜色</h5>
         <el-menu
           default-active="2"
           class="el-menu-vertical-demo"
@@ -57,12 +56,15 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 div::-webkit-scrollbar {
   width: 0;
 }
 .body {
   height: 100%;
   width: 100%;
+  .el-col-12 {
+    width: 101%;
+  }
 }
 </style>

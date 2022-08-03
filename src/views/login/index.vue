@@ -10,6 +10,7 @@
       :rules="formrules"
     >
       <img
+        class="dikede"
         src="http://likede2-admin.itheima.net/img/logo.595745bd.png"
         alt=""
       />
@@ -53,6 +54,7 @@
                 top: 17%;
                 left: 6%;
               "
+              class="pic"
               :src="pic"
               alt=""
             />
@@ -113,7 +115,6 @@ export default {
     };
   },
   async created() {
-    this.random = 1234;
     this.changeCode();
     await this.$store.dispatch("user/getCode");
     this.pic = this.img;
@@ -201,11 +202,19 @@ export default {
     margin-top: 500px;
   }
 
-  img {
+  .dikede {
     position: absolute;
-    width: 96px;
+    width: 81px;
     height: 96px;
-    top: -46px;
+    top: 8px;
+    left: 50%;
+    margin-left: -48px;
+  }
+  .pic {
+    position: absolute;
+    width: 81px;
+    height: 96px;
+    top: 8px;
     left: 50%;
     margin-left: -48px;
   }
