@@ -15,3 +15,8 @@ export function getCode(clientToken) {
     responseType: "arraybuffer",
   })
 }
+
+
+/**
+ *  /api/user-service/user/:id
+ */

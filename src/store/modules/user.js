@@ -1,10 +1,11 @@
 import { getCode,login } from "@/api/user";
-
 export default {
   namespaced: true,
   state:{
     token:'',
-    img:''
+    img:'',
+    realToken:'',
+    userInfo:{}
   },
   mutations:{
     setToken(state,payload){
@@ -87,12 +88,18 @@ export default {
     setCode(state,payload){
         state.img=payload
     },
+    setRealToken(state,payload){
+        state.realToken=payload
+    },
+    setUserInfo(state,payload){
+      state.userInfo=payload
+    }     
   },
   actions:{
     getToken(context,val){
       context.commit('getRandom')
     },
-  async  getCode(context,val){
+    async  getCode(context,val){
       const res = await getCode(val)
       const imgUrl =  "data:image/png;base64," + btoa( new Uint8Array(res.data).reduce( 
     (data, byte) => data + String.fromCharCode(byte), "" 
@@ -100,5 +107,6 @@ export default {
     )
     context.commit('setCode',imgUrl)
     },
+  
   }
 }

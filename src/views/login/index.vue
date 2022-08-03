@@ -71,6 +71,7 @@ import { createNamespacedHelpers } from "vuex";
 import _ from "lodash";
 const { mapState: usermapstate } = createNamespacedHelpers("user");
 import { login } from "@/api/user";
+import { getDetailUserInfo } from "@/api/layout";
 
 export default {
   name: "Login",
@@ -108,11 +109,15 @@ export default {
         ],
       },
       pic: "",
+      random: 1234,
     };
   },
   async created() {
+    this.random = 1234;
+    this.changeCode();
     await this.$store.dispatch("user/getCode");
     this.pic = this.img;
+    this.$store.commit("user/setToken");
   },
   mounted() {},
   computed: {
@@ -140,8 +145,13 @@ export default {
         loginName: this.form.username,
         password: this.form.password,
       });
+      this.$store.commit("user/setRealToken", res.data.token);
+      console.log(res);
+      // const info = await getDetailUserInfo(res.data.token);
+      // console.log(info);
+      this.$store.commit("user/setUserInfo", { ...res.data });
       if (res.data.msg === "登录成功") {
-        this.$router.push("/home");
+        this.$router.push("/");
       } else {
         alert("登录失败");
       }
@@ -154,9 +164,9 @@ export default {
       ) {
         return alert("请输入用户名或密码");
       }
-      this.$store.dispatch("user/getToken");
-      await this.$store.dispatch("user/getCode", this.$store.state.user.token);
-      console.log(this.pic);
+      console.log(123);
+      console.log(this.random);
+      await this.$store.dispatch("user/getCode", this.random);
       this.pic = this.img;
     }, 1000),
   },

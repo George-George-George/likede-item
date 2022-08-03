@@ -3,8 +3,10 @@
     <img src="http://likede2-admin.itheima.net/img/logo.3673fab5.png" alt="" />
     <div class="right-menu">
       <div class="touxiang">11</div>
-      <div><span>欢迎您,admin</span></div>
-      <div><el-button type="danger" disabled>退出</el-button></div>
+      <div>
+        <span>欢迎您,{{ $store.state.user.userInfo.userName }}</span>
+      </div>
+      <div class="btn"><el-button type="danger" disabled>退出</el-button></div>
     </div>
   </div>
 </template>
@@ -43,5 +45,13 @@ export default {
   width: 240px;
   height: 60px;
   justify-content: space-between;
+  align-self: center;
+  span {
+    color: #fff;
+  }
+  .btn {
+    position: relative;
+    top: -16%;
+  }
 }
 </style>
