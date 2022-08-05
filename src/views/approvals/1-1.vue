@@ -1,12 +1,16 @@
 <template>
   <div class="dashboard-container">
-    <navbar :itemName="itemName" />
-    <div class="app-container"></div>
+    <navbar :itemName="itemName" :isBtn="true" />
+    <div class="app-container">
+      <maind></maind>
+    </div>
   </div>
 </template>
 
 <script>
+import maind from './main'
 import navbar from "./navbar";
+import { getItemList } from '@/api/apprpvals'
 export default {
   data() {
     return {
@@ -17,16 +21,30 @@ export default {
     };
   },
 
-  created() {},
+  created() {
+    this.getItemList()
+  },
 
-  methods: {},
+  methods: {
+    async getItemList() {
+      const res = await getItemList()
+      console.log(res);
+    },
+
+  },
   components: {
     navbar,
-  },
-};
+    maind
+  }
+}
 </script>
 
 <style scoped lang="scss">
-.dashboard-container {
+.app-container {
+  margin-top: 15px;
+  width: 100%;
+  background-color: #fff;
+  padding: 15px;
+  height: 673px;
 }
 </style>

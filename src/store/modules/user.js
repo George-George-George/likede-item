@@ -1,17 +1,17 @@
-import { getCode,login } from "@/api/user";
+import { getCode, login } from "@/api/user";
 export default {
   namespaced: true,
-  state:{
-    token:'',
-    img:'',
-    realToken:'',
-    userInfo:{}
+  state: {
+    token: '',
+    img: '',
+    realToken: '',
+    userInfo: {}
   },
-  mutations:{
-    setToken(state,payload){
+  mutations: {
+    setToken(state, payload) {
       state.token = 1234
     },
-      getRandom(state) {
+    getRandom(state) {
       var chars = [
         "0",
         "1",
@@ -82,31 +82,31 @@ export default {
         nums += chars[id];
       } //赋值
       this.checkNumber = nums;
-      state.token=1234
+      state.token = 1234
       return nums;
     },
-    setCode(state,payload){
-        state.img=payload
+    setCode(state, payload) {
+      state.img = payload
     },
-    setRealToken(state,payload){
-        state.realToken=payload
+    setRealToken(state, payload) {
+      state.realToken = payload
     },
-    setUserInfo(state,payload){
-      state.userInfo=payload
-    }     
+    setUserInfo(state, payload) {
+      state.userInfo = payload
+    }
   },
-  actions:{
-    getToken(context,val){
+  actions: {
+    getToken(context, val) {
       context.commit('getRandom')
     },
-    async  getCode(context,val){
+    async getCode(context, val) {
       const res = await getCode(val)
-      const imgUrl =  "data:image/png;base64," + btoa( new Uint8Array(res.data).reduce( 
-    (data, byte) => data + String.fromCharCode(byte), "" 
-    )
-    )
-    context.commit('setCode',imgUrl)
+      const imgUrl = "data:image/png;base64," + btoa(new Uint8Array(res.data).reduce(
+        (data, byte) => data + String.fromCharCode(byte), ""
+      )
+      )
+      context.commit('setCode', imgUrl)
     },
-  
+
   }
 }
