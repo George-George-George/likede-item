@@ -11,8 +11,8 @@
         :collapse-transition="false"
       >
         <sidebar-item
-          v-for="route in routes"
-          :key="route.path"
+          v-for="(route, index) in routes"
+          :key="index"
           :item="route"
           :base-path="route.path"
         />
