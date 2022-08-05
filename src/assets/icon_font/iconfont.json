@@ -1,0 +1,128 @@
+{
+  "id": "3559010",
+  "name": "立可得",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "869170",
+      "name": "主页",
+      "font_class": "zhuye",
+      "unicode": "e6ce",
+      "unicode_decimal": 59086
+    },
+    {
+      "icon_id": "2076283",
+      "name": " 订单集合",
+      "font_class": "dingdan",
+      "unicode": "e897",
+      "unicode_decimal": 59543
+    },
+    {
+      "icon_id": "3020033",
+      "name": "二级-报表策略",
+      "font_class": "celue",
+      "unicode": "eaac",
+      "unicode_decimal": 60076
+    },
+    {
+      "icon_id": "3977817",
+      "name": "查询",
+      "font_class": "chaxun",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "5062044",
+      "name": "模块管理",
+      "font_class": "shangpin",
+      "unicode": "e635",
+      "unicode_decimal": 58933
+    },
+    {
+      "icon_id": "5303535",
+      "name": "新建",
+      "font_class": "xinjian",
+      "unicode": "e64b",
+      "unicode_decimal": 58955
+    },
+    {
+      "icon_id": "5387975",
+      "name": "账单_o",
+      "font_class": "duizhang",
+      "unicode": "eba4",
+      "unicode_decimal": 60324
+    },
+    {
+      "icon_id": "8288872",
+      "name": "手机",
+      "font_class": "zhanghao",
+      "unicode": "e853",
+      "unicode_decimal": 59475
+    },
+    {
+      "icon_id": "8361844",
+      "name": "眼睛3",
+      "font_class": "yanjing",
+      "unicode": "e6cf",
+      "unicode_decimal": 59087
+    },
+    {
+      "icon_id": "8361853",
+      "name": "眼睛1",
+      "font_class": "yanjing1",
+      "unicode": "e6d0",
+      "unicode_decimal": 59088
+    },
+    {
+      "icon_id": "8688320",
+      "name": "事件工单管理",
+      "font_class": "gondan",
+      "unicode": "e6e5",
+      "unicode_decimal": 59109
+    },
+    {
+      "icon_id": "12672821",
+      "name": "更多",
+      "font_class": "gengduo",
+      "unicode": "e67f",
+      "unicode_decimal": 59007
+    },
+    {
+      "icon_id": "12820178",
+      "name": "人员管理",
+      "font_class": "renyuan",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    },
+    {
+      "icon_id": "13672652",
+      "name": "充电桩",
+      "font_class": "shebei",
+      "unicode": "e672",
+      "unicode_decimal": 58994
+    },
+    {
+      "icon_id": "14296829",
+      "name": "点位总数",
+      "font_class": "dianwei",
+      "unicode": "e6cc",
+      "unicode_decimal": 59084
+    },
+    {
+      "icon_id": "15765372",
+      "name": "验证码",
+      "font_class": "yanzheng",
+      "unicode": "e699",
+      "unicode_decimal": 59033
+    },
+    {
+      "icon_id": "18406520",
+      "name": "密码",
+      "font_class": "mima",
+      "unicode": "e6f8",
+      "unicode_decimal": 59128
+    }
+  ]
+}
